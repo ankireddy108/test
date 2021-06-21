@@ -1,0 +1,12 @@
+---
+- name: This is a simple play command line arguments
+  hosts: ansible_clients
+  remote_user: root
+  gather_facts: false
+  become: yes
+
+  tasks:
+  - name: working with {{pkg}}
+    yum:
+     name: "{{pkg}}"
+     state: "{{req_state}}"
