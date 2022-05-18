@@ -1,0 +1,8 @@
+---
+ - hosts: ansible_clients
+   gather_facts: false
+   tasks:
+   - debug:
+      msg:
+      - "The x value is: {{x}}"
+#      - "The y value is: {{y}}"  

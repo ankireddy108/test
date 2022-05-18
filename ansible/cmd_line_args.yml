@@ -1,0 +1,5 @@
+---
+ - hosts: ansible_clients
+   gather_facts: false
+   tasks:
+   - debug: var=x  

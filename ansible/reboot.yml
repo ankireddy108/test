@@ -1,0 +1,30 @@
+---
+- name: multiple server reboot
+  hosts: ansible_clients
+  remote_user: root
+  become: yes
+  tasks:
+
+  - name: create a file
+    file:
+      path: /tmp/reboot.txt
+      state: touch
+  - name: check if file exists
+    stat:
+      path: /tmp/reboot.txt
+    register: _file_exists
+
+  - name: set the reboot module
+    reboot:
+       msg: "the message before the reboot"
+       connect_timeout: 5
+       reboot_timeout: 300
+       pre_reboot_delay: 0
+       post_reboot_delay: 30
+       test_command: uptime
+    when: _file_exists.stat.exists
+
+  - name: this is the task after reboot
+    file:
+       path: /tmp/reboot.txt
+       state: touch
