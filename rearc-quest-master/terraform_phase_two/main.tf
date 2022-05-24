@@ -16,8 +16,7 @@ variable "aws_region" {
 provider "aws" {
   #region = var.aws_region
    region = "us-east-1"
-   access_key = "AKIAZ56GJVLFOS2OJ2FJ"
-   secret_key = "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"
+   
 }
 
 # Outputs DNS url for the project once the Terraform template has been completed.
