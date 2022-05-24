@@ -1,6 +1,6 @@
 # Rearc Quest | Dockerfile and Terraform | Derek Wolpert
 
-![Secret Page Screenshot](readme_images/screenshot.png)
+
 
 ## Overview
 
