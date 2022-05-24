@@ -1,6 +1,3 @@
-# Rearc Quest | Dockerfile and Terraform | Derek Wolpert
-
-
 
 ## Overview
 
